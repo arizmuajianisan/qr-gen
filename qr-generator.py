@@ -12,7 +12,7 @@ def generate_qr_code(data, file_name='qr_code.png'):
 
     # Add data to the QR Code
     qr.add_data(data)
-    qr.make(fit=True)
+    qr.make(fit=False)
 
     # Create an image from the QR Code instance
     img = qr.make_image(fill='black', back_color='white')
@@ -24,5 +24,6 @@ def generate_qr_code(data, file_name='qr_code.png'):
 
 # Example usage
 if __name__ == "__main__":
-    data = "AM1001"
-    generate_qr_code(data, "AM1001_qr.png")
+    data = "AM1003-test"
+    filename= f"{data}.png"
+    generate_qr_code(data,filename)
